@@ -57,7 +57,12 @@ class _CategoryState extends State<Category> {
             children: [
             Padding(
               padding: const EdgeInsets.all(20.0),
-              child: Icon(Icons.arrow_back),
+              child: GestureDetector(
+                onTap: (){
+                  Navigator.pop(context);
+                },
+                child: Icon(Icons.arrow_back
+                ),),
             ),
             Text('Electronique',style: TextStyle(fontSize: 20),),
             SizedBox(width: 150,)

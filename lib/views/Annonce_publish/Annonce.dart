@@ -144,7 +144,12 @@ List<S2Choice<String>> subCategorie = [
                 children: [
                   Padding(
                     padding: const EdgeInsets.all(8.0),
-                    child: Icon(Icons.arrow_back),
+                    child: GestureDetector(
+                      onTap:(){
+                        //route pour le back arrow
+                        Navigator.pushNamed(context, '/Category');
+                      },
+                      child: Icon(Icons.arrow_back)),
                   ),
                 ],
               ),
